@@ -5,7 +5,6 @@
   - Return an array with the new value added at the **middle** index.
   - Write the function without using any of the built-in methods available to your language.  
 
-
 ## Whiteboard Process
 <!-- Embedded whiteboard image -->
 ![array-reverse](./array-insert-shift.png)
