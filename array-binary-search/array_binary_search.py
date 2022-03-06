@@ -4,6 +4,10 @@ key = 2
 
 
 def binary_search(arr, key):
+    """
+        This function search for an element inside the array
+        using the binary search method
+    """
     l = 0
     r = len(arr) - 1
     while l <= r:
