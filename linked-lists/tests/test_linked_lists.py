@@ -83,8 +83,126 @@ def test_not_exist(multiple_nodes):
 
 def test_return_collection_of_values(multiple_nodes):
     # ?[7] Can properly return a collection of all the values that exist in the linked list
+
     actual = multiple_nodes.to_string()
     expected = '{ D } -> { C } -> { B } -> { A } -> Null'
+    assert actual == expected
+
+
+def test_add_node_to_the_end(multiple_nodes):
+    # ? [1] Can successfully add a node to the end of the linked list
+    multiple_nodes.append(Node('F'))
+
+    actual = multiple_nodes.to_string()
+    expected = '{ D } -> { C } -> { B } -> { A } -> { F } -> Null'
+    assert actual == expected
+
+    actual = multiple_nodes.includes('F')
+    expected = True
+    assert actual == expected
+
+
+def test_multiple_nodes_to_end_of_linked_list(multiple_nodes):
+    # ? [2] Can successfully add multiple nodes to the end of a linked list
+    multiple_nodes.append(Node('F'))
+    multiple_nodes.append(Node('H'))
+    multiple_nodes.append(Node('J'))
+
+    actual = multiple_nodes.to_string()
+    expected = '{ D } -> { C } -> { B } -> { A } -> { F } -> { H } -> { J } -> Null'
+    assert actual == expected
+
+    actual = multiple_nodes.includes('F')
+    expected = True
+    assert actual == expected
+
+    actual = multiple_nodes.includes('H')
+    expected = True
+    assert actual == expected
+
+    actual = multiple_nodes.includes('J')
+    expected = True
+    assert actual == expected
+
+
+def test_insert_before_at_middle(multiple_nodes):
+    # ?[3] Can successfully insert a node before a node located i the middle of a linked list
+
+    actual = multiple_nodes.to_string()
+    expected = '{ D } -> { C } -> { B } -> { A } -> Null'
+    assert actual == expected
+
+    multiple_nodes.insert_before("B", Node('F'))
+    actual = multiple_nodes.to_string()
+    expected = '{ D } -> { C } -> { F } -> { B } -> { A } -> Null'
+    assert actual == expected
+
+
+def test_insert_before_first_node(multiple_nodes):
+    # ?[4] Can successfully insert a node before the first node of a linked list
+
+    actual = multiple_nodes.to_string()
+    expected = '{ D } -> { C } -> { B } -> { A } -> Null'
+    assert actual == expected
+
+    multiple_nodes.insert_before("D", Node('F'))
+    actual = multiple_nodes.to_string()
+    expected = '{ F } -> { D } -> { C } -> { B } -> { A } -> Null'
+    assert actual == expected
+
+
+def test_insert_after_node(multiple_nodes):
+    # ?[5] Can successfully insert after a node in the middle of the linked list
+    actual = multiple_nodes.to_string()
+    expected = '{ D } -> { C } -> { B } -> { A } -> Null'
+    assert actual == expected
+
+    multiple_nodes.insert_after("C", Node('Hello World'))
+    actual = multiple_nodes.to_string()
+    expected = '{ D } -> { C } -> { Hello World } -> { B } -> { A } -> Null'
+    assert actual == expected
+
+
+def test_insert_after_last_node(multiple_nodes):
+    # ?[6] Can successfully insert a node after the last node of the linked list
+
+    actual = multiple_nodes.to_string()
+    expected = '{ D } -> { C } -> { B } -> { A } -> Null'
+    assert actual == expected
+
+    multiple_nodes.insert_after("A", Node('Hello World'))
+    actual = multiple_nodes.to_string()
+    expected = '{ D } -> { C } -> { B } -> { A } -> { Hello World } -> Null'
+    assert actual == expected
+
+
+def test_delete_node(multiple_nodes):
+    # Stretch Goal (Delete Node)
+
+    # Delete from the beginning
+    actual = multiple_nodes.includes('D')
+    expected = True
+    assert actual == expected
+
+    actual = multiple_nodes.delete_node('D')
+    expected = None
+    assert actual == expected
+
+    actual = multiple_nodes.includes('D')
+    expected = False
+    assert actual == expected
+
+    # Delete the last node
+    actual = multiple_nodes.includes('A')
+    expected = True
+    assert actual == expected
+
+    actual = multiple_nodes.delete_node('A')
+    expected = None
+    assert actual == expected
+
+    actual = multiple_nodes.includes('A')
+    expected = False
     assert actual == expected
 
 
