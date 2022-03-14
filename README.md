@@ -5,3 +5,6 @@
 | Code Challenge: Class 01 | [Array reverse](./array-reverse/README.md) |
 | Code Challenge: Class 02 | [Array insert shift](./array-insert-shift/README.md) |
 | Code Challenge: Class 03 | [Array binary search](./array-binary-search/README.md) |
+| Code Challenge: Class 04 | [Mock Interviews](https://docs.google.com/spreadsheets/d/11VbWA8vDrpe3rkn11LxcYf4JTr40TL2UFF0PWjaGJKk/edit#gid=0) |
+| Code Challenge: Class 05 | [Linked List Implementation](./linked-lists/README.md) |
+| Code Challenge: Class 06 | [Extend Linked List Implementation](./linked-lists/README.md) |
