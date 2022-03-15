@@ -44,3 +44,31 @@
 <!-- Show how to run your code, and examples of it in action -->
    - Go to the directory `linked_lists`
    - and type `python linked_list.py`
+
+
+---
+
+# Lab 07
+
+
+# Challenge Summary
+<!-- Description of the challenge -->
+  - Create a method that take a number represent the position of a node.
+    - if the position exist return the value of that node
+    - if not, return does not exist
+
+## Whiteboard Process
+<!-- Embedded whiteboard image -->
+![linked-list-kth](./imgs/linked-list-kth.png)
+
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+  - Big-O(n)
+
+## Solution
+<!-- Show how to run your code, and examples of it in action -->
+  - Create a variable in the linked list class to represent the length of the linked list.
+  - By tracking all the inserted nodes, by increasing the variable length.
+  ### To check my solution:
+    - Go to the directory `linked_lists`
+    - and type `python linked_list.py`

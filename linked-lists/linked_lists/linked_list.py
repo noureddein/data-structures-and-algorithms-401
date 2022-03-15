@@ -1,4 +1,6 @@
 class LinkedList:
+    ll_length = 0
+
     def __init__(self):
         self.head = None
 
@@ -20,6 +22,7 @@ class LinkedList:
         try:
             new_node.next = self.head
             self.head = new_node
+            self.ll_length += 1
         except AttributeError:
             print("Check if you added yor value to a Node first.")
 
@@ -34,11 +37,13 @@ class LinkedList:
         """
         if self.head is None:
             self.head = new_value
+            self.ll_length += 1
             return
         current = self.head
         while True:
             if current.next is None:
                 current.next = new_value
+                self.ll_length += 1
                 break
             current = current.next
 
@@ -64,9 +69,11 @@ class LinkedList:
                 except AttributeError:
                     self.head = new_value
                     new_value.next = current
+                    self.ll_length += 1
                     return
                 else:
                     new_value.next = current
+                    self.ll_length += 1
                     return
             prev_node = current
             current = current.next
@@ -85,6 +92,7 @@ class LinkedList:
             if current.value == value:
                 new_value.next = current.next
                 current.next = new_value
+                self.ll_length += 1
                 return
             current = current.next
         return print("The value you want to insert after does not exist.")
@@ -125,15 +133,39 @@ class LinkedList:
             if current_node.value == value:
                 try:
                     prev_node.next = current_node.next
+                    self.ll_length -= 1
                     break
                 except AttributeError:
                     self.head = current_node.next
+                    self.ll_length -= 1
                     break
             if current_node.next == None:
                 print("Not Found")
                 break
             prev_node = current_node
             current_node = current_node.next
+
+    def kthFromEnd(self, k):
+        """
+        kthFromEnd method used to get the value of a specific position.
+
+        Input:
+            k -> integer, positive number
+        Output:
+            Return -> The value of that postion if it exist.
+
+        """
+        if k < 0 or type(k) is not int:
+            return "Negative numbres or non-integer numbers not acceptable."
+
+        if k > self.ll_length:
+            return "The value does not exist."
+
+        current = self.head
+        for i in range(self.ll_length - 1, -1, -1):
+            if i == k:
+                return current.value
+            current = current.next
 
 
 if __name__ == "__main__":
@@ -144,6 +176,7 @@ if __name__ == "__main__":
     ll.insert(Node("B"))
     ll.insert(Node("C"))
     ll.insert(Node("D"))
+
     print("------------------- The values in the linked list ---------------")
     print(ll.to_string())
     print(
@@ -166,3 +199,6 @@ if __name__ == "__main__":
     )
     ll.delete_node("append")
     print(ll.to_string())
+    print(ll.kthFromEnd(2))
+    ll.delete_node("KK")
+    print(ll.kthFromEnd(2))

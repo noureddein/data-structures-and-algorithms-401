@@ -8,3 +8,4 @@
 | Code Challenge: Class 04 | [Mock Interviews](https://docs.google.com/spreadsheets/d/11VbWA8vDrpe3rkn11LxcYf4JTr40TL2UFF0PWjaGJKk/edit#gid=0) |
 | Code Challenge: Class 05 | [Linked List Implementation](./linked-lists/README.md) |
 | Code Challenge: Class 06 | [Extend Linked List Implementation](./linked-lists/README.md) |
+| Code Challenge: Class 07 | [k-th value from the end of a linked list](./linked-lists/README.md) |
