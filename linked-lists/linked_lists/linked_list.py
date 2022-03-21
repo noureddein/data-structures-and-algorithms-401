@@ -1,3 +1,6 @@
+from linked_lists.node import Node
+
+
 class LinkedList:
     ll_length = 0
 
@@ -22,7 +25,6 @@ class LinkedList:
         try:
             new_node.next = self.head
             self.head = new_node
-            self.ll_length += 1
         except AttributeError:
             print("Check if you added yor value to a Node first.")
 
@@ -37,13 +39,11 @@ class LinkedList:
         """
         if self.head is None:
             self.head = new_value
-            self.ll_length += 1
             return
         current = self.head
         while True:
             if current.next is None:
                 current.next = new_value
-                self.ll_length += 1
                 break
             current = current.next
 
@@ -69,11 +69,9 @@ class LinkedList:
                 except AttributeError:
                     self.head = new_value
                     new_value.next = current
-                    self.ll_length += 1
                     return
                 else:
                     new_value.next = current
-                    self.ll_length += 1
                     return
             prev_node = current
             current = current.next
@@ -92,7 +90,6 @@ class LinkedList:
             if current.value == value:
                 new_value.next = current.next
                 current.next = new_value
-                self.ll_length += 1
                 return
             current = current.next
         return print("The value you want to insert after does not exist.")
@@ -133,17 +130,27 @@ class LinkedList:
             if current_node.value == value:
                 try:
                     prev_node.next = current_node.next
-                    self.ll_length -= 1
                     break
                 except AttributeError:
                     self.head = current_node.next
-                    self.ll_length -= 1
                     break
             if current_node.next == None:
                 print("Not Found")
                 break
             prev_node = current_node
             current_node = current_node.next
+
+    def get_ll_length(self):
+        """
+        This function take no arguments and return the length
+        of the linked list.
+        """
+        current = self.head
+        count = 0
+        while current:
+            count += 1
+            current = current.next
+        return count
 
     def kthFromEnd(self, k):
         """
@@ -155,27 +162,53 @@ class LinkedList:
             Return -> The value of that postion if it exist.
 
         """
+        ll_length = self.get_ll_length()
         if k < 0 or type(k) is not int:
             return "Negative numbres or non-integer numbers not acceptable."
 
-        if k > self.ll_length:
+        if k >= ll_length:
             return "The value does not exist."
 
         current = self.head
-        for i in range(self.ll_length - 1, -1, -1):
+        for i in range(ll_length - 1, -1, -1):
             if i == k:
                 return current.value
             current = current.next
+
+    @staticmethod
+    def zip_list(ll_1, ll_2):
+        """
+        The zip_list function took two objects as an arguments, the zip function linked the two lists together into one so that the nodes alternate between the two lists and return a reference to the  zipped list.
+
+        Input:
+            ll_1 -> linked list object
+            ll_2 -> linked list object
+
+        Output:
+            Return -> the zipped linked list
+        """
+        current_ll_1 = ll_1.head
+        current_ll_2 = ll_2.head
+
+        while current_ll_2:
+            if current_ll_1 == None and current_ll_2 != None:
+                ll_1.append(current_ll_2)
+                break
+            ll_1.insert_after(current_ll_1.value, Node(current_ll_2.value))
+            current_ll_1 = current_ll_1.next.next
+            current_ll_2 = current_ll_2.next
+        return ll_1
 
 
 if __name__ == "__main__":
     from node import Node
 
     ll = LinkedList()
-    ll.insert(Node("A"))
-    ll.insert(Node("B"))
-    ll.insert(Node("C"))
+    ll.insert(Node("E"))
     ll.insert(Node("D"))
+    ll.insert(Node("C"))
+    ll.insert(Node("B"))
+    ll.insert(Node("A"))
 
     print("------------------- The values in the linked list ---------------")
     print(ll.to_string())
@@ -199,6 +232,21 @@ if __name__ == "__main__":
     )
     ll.delete_node("append")
     print(ll.to_string())
-    print(ll.kthFromEnd(2))
-    ll.delete_node("KK")
-    print(ll.kthFromEnd(2))
+
+    ll_2 = LinkedList()
+    ll_2.insert(Node(4))
+    ll_2.insert(Node(4))
+    ll_2.insert(Node(3))
+    ll_2.insert(Node(2))
+    ll_2.insert(Node(1))
+
+    print(ll_2.to_string())
+    print("Linked List length: ", ll_2.get_ll_length())
+
+    zipped_ll = LinkedList.zip_list(ll, ll_2)
+    print(zipped_ll.to_string())
+    print("Linked List length: ", zipped_ll.get_ll_length())
+    print(zipped_ll.kthFromEnd(0))
+    zipped_ll.delete_node("KK")
+    print(zipped_ll.to_string())
+    print(zipped_ll.kthFromEnd(11))

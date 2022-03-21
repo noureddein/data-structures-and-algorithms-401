@@ -209,7 +209,7 @@ def test_delete_node(multiple_nodes):
 def test_k_equals_ll_length(multiple_nodes):
     # ?[1]  Where k and the length of the list are the same
     k = 4
-    actual = multiple_nodes.ll_length
+    actual = multiple_nodes.get_ll_length()
     expected = k
     assert actual == expected
 
@@ -234,7 +234,7 @@ def test_negative_k(multiple_nodes):
 
 def test_linked_list_size_is_1(one_node):
     # ? [4] Where the linked list is of a size 1
-    actual = one_node.ll_length
+    actual = one_node.get_ll_length()
     expected = 1
 
     assert actual == expected

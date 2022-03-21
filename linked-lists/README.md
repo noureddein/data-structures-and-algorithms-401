@@ -1,4 +1,4 @@
-# Lab 05
+# Code challenge 05
 # Singly Linked List (SLL)
 <!-- Short summary or background information -->
   - SLL is a linear data structure.
@@ -22,7 +22,7 @@
 
 ---
 
-# Lab 06
+# Code challenge 06
 
 ## Challenge Summary
 <!-- Description of the challenge -->
@@ -48,7 +48,7 @@
 
 ---
 
-# Lab 07
+# Code challenge 07
 
 
 # Challenge Summary
@@ -70,5 +70,34 @@
   - Create a variable in the linked list class to represent the length of the linked list.
   - By tracking all the inserted nodes, by increasing the variable length.
   ### To check my solution:
+    - Go to the directory `linked_lists`
+    - and type `python linked_list.py`
+
+---
+# Code challenge 08
+
+# Challenge Summary
+<!-- Description of the challenge -->
+  - Write a function called zip lists
+  - Arguments: 2 linked lists
+  - Return: New Linked List, zipped as noted below
+  - Zip the two linked lists together into one so that the nodes alternate between the two lists and return a reference to the the zipped list.
+  - Try and keep additional space down to O(1)
+  - You have access to the Node class and all the properties on the Linked List class as well as the methods created in previous challenges.
+
+
+## Whiteboard Process
+<!-- Embedded whiteboard image -->
+![zip method](imgs/zip_method.png)
+
+
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+  - Big-O(n^<sup>2<sup> )
+
+
+## Solution
+<!-- Show how to run your code, and examples of it in action -->
+  - ### To check my solution:
     - Go to the directory `linked_lists`
     - and type `python linked_list.py`
