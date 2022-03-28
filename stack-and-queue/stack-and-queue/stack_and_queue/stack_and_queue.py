@@ -141,4 +141,4 @@ stack.push('B')
 stack.push('C')
 stack.push('D')
 
-print(queue_.peek())
+# print(stac.peek())

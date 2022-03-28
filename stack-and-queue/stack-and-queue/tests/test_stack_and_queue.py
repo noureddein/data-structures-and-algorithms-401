@@ -1,4 +1,3 @@
-from cmath import exp
 from stack_and_queue.stack_and_queue import Stack, Queue
 import pytest
 
