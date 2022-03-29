@@ -9,3 +9,6 @@
 | Code Challenge: Class 05 | [Linked List Implementation](./linked-lists/README.md) |
 | Code Challenge: Class 06 | [Extend Linked List Implementation](./linked-lists/README.md) |
 | Code Challenge: Class 07 | [k-th value from the end of a linked list](./linked-lists/README.md) |
+| Code Challenge: Class 08 | [Zipping linked list](./linked-lists/README.md) |
+| Code Challenge: Class 10 | [Stack and a Queue Implementation](./stack-and-queue/README.md) |
+| Code Challenge: Class 11 | [Implement a Queue using two Stacks.](./stack-and-queue/stack-and-queue/README.md) |
