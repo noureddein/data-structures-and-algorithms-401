@@ -58,3 +58,29 @@
 <!-- Show how to run your code, and examples of it in action -->
   - Go to the directory `stack_and_queue` from you terminal.
   - Type `Python` and the file name `stack_and_queue.py` to run the file.
+
+---
+# **CC 12**: Animal Shelter.
+
+## Challenge Summary
+<!-- Description of the challenge -->
+  - Implement a class called **AnimalShelter**
+  - Implement a method called **enqueue** to add the animals to the shelter.
+  - Implement a method called **dequeue** to to delete animal from queue even if it not at the front. 
+
+## Whiteboard Process
+<!-- Embedded whiteboard image -->
+![Enqueue and class implementation](./whiteboard/../../whiteboard/enqueue_animals.png)
+![Dequeue implementation](./whiteboard/../../whiteboard/dequeue_animal.png)
+
+
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+  - Create a class AnimalShelter with two methods enqueue and dequeue.
+   - **Enqueue**: Take a value of `dog` or `cat` and add it to queue, if the value NOT `dog` or `cat` it do nothing. The efficiency for this method is Big-O(1) for time and space.
+   - **Dequeue**: Take a value of `dog` or `cat` and loop through the queue to search for this animal, and delete the first appearance of this animal and return the value of the node that hold the animal.If the user entered an animal that does not exist, it delete the first value of the queue. The efficiency for this method is Big-O(n) for time and Big-O(1) for space.
+
+## Solution
+<!-- Show how to run your code, and examples of it in action -->
+  - Go to the directory `stack_and_queue` from you terminal.
+  - Type `Python` and the file name `stack_and_queue.py` to run the file.
