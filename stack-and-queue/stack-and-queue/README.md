@@ -84,3 +84,26 @@
 <!-- Show how to run your code, and examples of it in action -->
   - Go to the directory `stack_and_queue` from you terminal.
   - Type `Python` and the file name `stack_and_queue.py` to run the file.
+
+
+--- 
+
+# **CC 13**: Validate Brackets.
+
+## Challenge Summary
+<!-- Description of the challenge -->
+  - Write a function called validate brackets, which take string argument and return a boolean if the brackets are balanced.
+
+## Whiteboard Process
+<!-- Embedded whiteboard image -->
+![validate bracket](../whiteboard/validate_bracket.png)
+
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+  - Create a function called **validate_brackets** and with a Stack and helper function called **get_closed_function**.
+    - The **validate_brackets** function have a loop to loop through the brackets string, if the string have an open bracket I push it to the stack and invoke the helper function which will return a closed bracket then keep looping. if the string have a closed bracket I pop it from stack. After the loop end, I check if the stack empty, the function return _True_, if not it return _False_.
+
+## Solution
+<!-- Show how to run your code, and examples of it in action -->
+  - Go to the directory `stack_and_queue` from you terminal.
+  - Type `Python` and the file name `validate_bracket.py` to run the file.
