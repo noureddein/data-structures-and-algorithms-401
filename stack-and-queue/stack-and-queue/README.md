@@ -58,3 +58,52 @@
 <!-- Show how to run your code, and examples of it in action -->
   - Go to the directory `stack_and_queue` from you terminal.
   - Type `Python` and the file name `stack_and_queue.py` to run the file.
+
+---
+# **CC 12**: Animal Shelter.
+
+## Challenge Summary
+<!-- Description of the challenge -->
+  - Implement a class called **AnimalShelter**
+  - Implement a method called **enqueue** to add the animals to the shelter.
+  - Implement a method called **dequeue** to to delete animal from queue even if it not at the front. 
+
+## Whiteboard Process
+<!-- Embedded whiteboard image -->
+![Enqueue and class implementation](./whiteboard/../../whiteboard/enqueue_animals.png)
+![Dequeue implementation](./whiteboard/../../whiteboard/dequeue_animal.png)
+
+
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+  - Create a class AnimalShelter with two methods enqueue and dequeue.
+   - **Enqueue**: Take a value of `dog` or `cat` and add it to queue, if the value NOT `dog` or `cat` it do nothing. The efficiency for this method is Big-O(1) for time and space.
+   - **Dequeue**: Take a value of `dog` or `cat` and loop through the queue to search for this animal, and delete the first appearance of this animal and return the value of the node that hold the animal.If the user entered an animal that does not exist, it delete the first value of the queue. The efficiency for this method is Big-O(n) for time and Big-O(1) for space.
+
+## Solution
+<!-- Show how to run your code, and examples of it in action -->
+  - Go to the directory `stack_and_queue` from you terminal.
+  - Type `Python` and the file name `stack_and_queue.py` to run the file.
+
+
+--- 
+
+# **CC 13**: Validate Brackets.
+
+## Challenge Summary
+<!-- Description of the challenge -->
+  - Write a function called validate brackets, which take string argument and return a boolean if the brackets are balanced.
+
+## Whiteboard Process
+<!-- Embedded whiteboard image -->
+![validate bracket](../whiteboard/validate_bracket.png)
+
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+  - Create a function called **validate_brackets** and with a Stack and helper function called **get_closed_function**.
+    - The **validate_brackets** function have a loop to loop through the brackets string, if the string have an open bracket I push it to the stack and invoke the helper function which will return a closed bracket then keep looping. if the string have a closed bracket I pop it from stack. After the loop end, I check if the stack empty, the function return _True_, if not it return _False_.
+
+## Solution
+<!-- Show how to run your code, and examples of it in action -->
+  - Go to the directory `stack_and_queue` from you terminal.
+  - Type `Python` and the file name `validate_bracket.py` to run the file.
