@@ -30,16 +30,17 @@ class PseudoQueue:
 
     def dequeue(self):
         if self.front == None:
-            return 'Queue is empty!'
+            return "Queue is empty!"
         temp = self.front
         self.front = self.front.next
         temp.next = None
 
 
 if __name__ == "__main__":
-    from stack_and_queue import Stack, Node
+    from trees.trees.stack_and_queue import Stack, Node
+
     pseudo_queue = PseudoQueue(Stack)
-    pseudo_queue.stack_alpha.push('A')
+    pseudo_queue.stack_alpha.push("A")
     pseudo_queue.enqueue(5)
     # pseudo_queue.dequeue()
     print(pseudo_queue.front.next)
