@@ -55,7 +55,7 @@ class AnimalShelter:
 
 
 if __name__ == "__main__":
-    from stack_and_queue import Node
+    from trees.trees.stack_and_queue import Node
 
     shelter = AnimalShelter()
     shelter.enqueue("Dog")
