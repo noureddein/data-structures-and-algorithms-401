@@ -14,3 +14,5 @@
 | Code Challenge: Class 11 | [Implement a Queue using two Stacks.](./stack-and-queue/stack-and-queue/README.md) |
 | Code Challenge: Class 12 | [Implement AnimalShelter.](./stack-and-queue/stack-and-queue/README.md) |
 | Code Challenge: Class 13 | [Multi-bracket Validation.](./stack-and-queue/stack-and-queue/README.md) |
+| Code Challenge: Class 15 | [Binary Tree and BST Implementation](./trees/README.md) |
+| Code Challenge: Class 16 | [Find the Maximum Value in a Binary Tree](./trees/README.md) |
