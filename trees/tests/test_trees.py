@@ -90,6 +90,36 @@ def test_contains(tree_with_empty_third_level):
     assert actual == expected
 
 
+def test_verified_tree(tree_of_numbers):
+    root = tree_of_numbers
+    tree = BinarySearchTree(root)
+    actual = tree.breadth_first()
+    expected = [2, 7, 5, 2, 6, 9, 5, 11, 4]
+    assert actual == expected
+
+
+def test_max_number(tree_of_numbers):
+    root = tree_of_numbers
+    tree = BinaryTree(root)
+    actual = tree.get_tree_max()
+    expected = 11
+    assert actual == expected
+
+
+def test_max_number_exception(tree_of_numbers):
+    root = tree_of_numbers
+    bst = BinarySearchTree(root)
+    bst.add(TreeNode('A'))
+    with pytest.raises(Exception):
+        bst.get_tree_max()
+
+
+def test_pass_empty_node_to_get_max():
+    with pytest.raises(Exception):
+        tree = BinarySearchTree(TreeNode(None))
+        tree.get_tree_max()
+
+
 @pytest.fixture
 def multi_nodes():
     a = TreeNode("A")
@@ -101,10 +131,8 @@ def multi_nodes():
 
     a.left = b
     a.right = c
-
     b.left = d
     b.right = e
-
     c.left = f
 
     return a
@@ -131,3 +159,13 @@ def tree_with_empty_third_level():
     a.right = c
 
     return a
+
+
+@pytest.fixture
+def tree_of_numbers():
+    root = TreeNode(2)
+    bst = BinarySearchTree(root)
+    numbers = [7, 5, 2, 6, 9, 5, 11, 4]
+    for i in numbers:
+        bst.add(i)
+    return root

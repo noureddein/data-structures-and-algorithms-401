@@ -1,4 +1,5 @@
 from queue import Queue as QueueInt
+from tkinter import font
 
 
 class CustomError(Exception):
@@ -9,6 +10,8 @@ class TreeNode:
     """Create the tree node object."""
 
     def __init__(self, value):
+        if value is None:
+            raise CustomError('Tree node value can not be NONE!')
         self.value = value
         self.right = None
         self.left = None
@@ -65,6 +68,26 @@ class BinaryTree:
 
         values = _walk(root)
         return values
+
+    def get_tree_max(self):
+        root = self.root
+        queue = QueueInt()
+        queue.put(root)
+        max_val = 0
+        while not queue.empty():
+            front = queue.get()
+            if not isinstance(front.value, int) and isinstance(front.value, float):
+                raise CustomError('Your value is not a number!')
+            if front.value > max_val:
+                max_val = front.value
+
+            if front.left is not None:
+                queue.put(front.left)
+
+            if front.right is not None:
+                queue.put(front.right)
+
+        return max_val
 
 
 class BinarySearchTree(BinaryTree):
