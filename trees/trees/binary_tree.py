@@ -104,7 +104,6 @@ class BinarySearchTree(BinaryTree):
 
             if front.right is not None:
                 queue.put(front.right)
-
         return values
 
     def add(self, value):
@@ -172,5 +171,4 @@ if __name__ == "__main__":
     print(bst.add("I"))
     print(bst.add("J"))
     print(bst.add("K"))
-    print(bst.breadth_first())
     print(bst.contains(True))

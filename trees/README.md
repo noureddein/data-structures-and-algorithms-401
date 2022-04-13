@@ -75,3 +75,25 @@
   - ### To check my solution:
     - Go to the directory `trees/trees`
     - and type `python binary_tree.py`
+
+---
+# Code challenge 17
+
+
+# Challenge Summary
+<!-- Description of the challenge -->
+  - Write a function called **breadth_first** that take a tree object as an argument and return a list of values in the tree, in the order they were encountered.
+
+## Whiteboard Process
+<!-- Embedded whiteboard image -->
+<img src="./whiteboard/breadth_first.png" alt="Breadth first implementation">
+
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+  - The approach is looping through the tree values level by level and append the values to a list.
+  - Big-O(n) for time and space.
+
+## Solution
+<!-- Show how to run your code, and examples of it in action -->
+   - Go to the directory `trees/trees`
+   - and type `python breadth_first.py`
