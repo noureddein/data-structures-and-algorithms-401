@@ -1,6 +1,6 @@
-from logging import root
 from trees.breadth_first import breadth_first
-from trees.binary_tree import TreeNode, BinarySearchTree, CustomError
+from trees.binary_tree import TreeNode, BinarySearchTree
+from trees.custom_error import CustomError
 import pytest
 
 

@@ -1,5 +1,6 @@
 from queue import Queue as QueueInt
-from trees.binary_tree import CustomError, TreeNode
+from trees.binary_tree import TreeNode
+from trees.custom_error import CustomError
 
 
 def breadth_first(root):
@@ -23,6 +24,7 @@ def breadth_first(root):
 
 if __name__ == "__main__":
     from binary_tree import TreeNode
+    import custom_error as CustomError
 
     a = TreeNode("A")
     b = TreeNode("B")
