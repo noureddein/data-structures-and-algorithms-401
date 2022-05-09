@@ -11,8 +11,6 @@ class FizzBuzz:
         self.k_ary_tree = k_ary_tree
 
     def _fizz_buzz_logic(self, value):
-        if not isinstance(value, int):
-            raise CustomError('The value should be an integer number!')
         """
             Input -> number
 
@@ -25,6 +23,9 @@ class FizzBuzz:
 
                 If the value is not divisible by 3 or 5, return the value as a string.
         """
+        if not isinstance(value, int):
+            raise CustomError('The value should be an integer number!')
+
         if value % 3 == 0 and value % 5 == 0:
             return 'FizzBuzz'
         if value % 3 == 0:
