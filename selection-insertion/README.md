@@ -15,5 +15,5 @@
   - Then replace the value of the indics
 
 ## Solution
-    - Go to the directory `selection-insertion/selection_insertion`
-    - and type `python selection_insertion.py`
+  - Go to the directory `selection-insertion/selection_insertion`
+  - and type `python selection_insertion.py`
