@@ -139,6 +139,26 @@ class BinarySearchTree(BinaryTree):
         return False
 
 
+def in_order(root1, root2):
+    def _walk(root, leafs_files=0):
+        if root.left is None and root.right is None:
+            leafs_files += 1
+
+        if root.left is not None:
+            _walk(root.left, leafs_files)
+
+        if root.right is not None:
+            _walk(root.right, leafs_files)
+
+        return leafs_files
+
+    leafs_root1 = _walk(root1)
+    leafs_root2 = _walk(root2)
+    if leafs_root1 == leafs_root2:
+        return True
+    return False
+
+
 if __name__ == "__main__":
     import custom_error as CustomError
     a = TreeNode("A")
@@ -153,16 +173,16 @@ if __name__ == "__main__":
     b.right = e
 
     a.right = c
-    c.left = f
+    c.right = f
 
     tree = BinaryTree(a)
-    # print(tree.pre_order())
+    print(tree.pre_order())
     # print(tree.in_order())
     # print(tree.post_order())
     bst = BinarySearchTree(a)
-    print(bst.add("G"))
-    print(bst.add("H"))
-    print(bst.add("I"))
-    print(bst.add("J"))
-    print(bst.add("K"))
-    print(bst.contains(True))
+    # print(bst.add("G"))
+    # print(bst.add("H"))
+    # print(bst.add("I"))
+    # print(bst.add("J"))
+    # print(bst.add("K"))
+    # print(bst.contains(True))

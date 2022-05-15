@@ -18,3 +18,4 @@
 | Code Challenge: Class 16 | [Find the Maximum Value in a Binary Tree](./trees/README.md) |
 | Code Challenge: Class 17 | [Breadth-first Traversal.](./trees/README.md) |
 | Code Challenge: Class 18 | [FizzBuzz Tree](./trees/README.md) |
+| Code Challenge: Class 26 | [Selection Insertion](./selection-insertion/README.md) |
