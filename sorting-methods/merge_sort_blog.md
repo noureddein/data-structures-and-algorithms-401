@@ -112,3 +112,8 @@ def merge(left, right, arr):
 ### Resource
   - [geeksforgeeks](https://www.geeksforgeeks.org/merge-sort/)
   - [Hash node blog](https://explanations.hashnode.dev/merge-sort#heading-what-is-merge-sort)
+  - Videos resource
+    - [FelixTechTips
+](https://www.youtube.com/watch?v=cVZMah9kEjI&t=2s)
+    - [Mr Dimmick's Computing Channel](https://www.youtube.com/watch?v=GUGraK7dzYE&t=1620s)
+
