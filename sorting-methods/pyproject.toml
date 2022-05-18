@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "selection-insertion"
+name = "sorting-methods"
 version = "0.1.0"
 description = ""
 authors = ["noureddein <noureddein@gmail.com>"]

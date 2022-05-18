@@ -10,7 +10,7 @@ def validate_items(_list):
             raise CustomError("Your list has non-integer item.")
 
 
-def selection_sort(arr):
+def insertion_sort(arr):
     validate_items(arr)
     n = len(arr)
     for i, val1 in enumerate(arr):  # for (i=0, condition, i++) for i in len(arr)
@@ -18,10 +18,10 @@ def selection_sort(arr):
         min = i
         j = i
         for _ in arr:
-            # j += 1
+            j += 1
             if j > n - 1:
                 break
-            if arr[i + 1] < arr[min]:
+            if arr[j] < arr[min]:
                 min = j
         temp = arr[min]
         arr[min] = arr[i]
@@ -30,5 +30,5 @@ def selection_sort(arr):
 
 
 if __name__ == "__main__":
-    print(selection_sort([2, 3, 5, 7, 13, 1]))
+    print(insertion_sort([2, 3, 5, 7, 13, 1]))
     # print(selection_sort([]))
