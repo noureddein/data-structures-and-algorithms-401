@@ -19,4 +19,4 @@
 | Code Challenge: Class 17 | [Breadth-first Traversal.](./trees/README.md) |
 | Code Challenge: Class 18 | [FizzBuzz Tree](./trees/README.md) |
 | Code Challenge: Class 26 | [Insertion Sort](./sorting-methods/README.md) , [Insertion Sort Blog](./sorting-methods/insertion_sort_blog.md)|
-| Code Challenge: Class 7 | [Merge Sort](./sorting-methods/README.md) , [Merge Sort Blog](./sorting-methods/merge_sort_blog.md) |
+| Code Challenge: Class 27 | [Merge Sort](./sorting-methods/README.md) , [Merge Sort Blog](./sorting-methods/merge_sort_blog.md) |
