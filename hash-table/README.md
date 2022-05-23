@@ -1,4 +1,4 @@
-# Hashtables
+# Hashtables Lab: 30
 
 ## Summary
 <!-- Short summary or background information -->
@@ -43,3 +43,31 @@
     2. Get(): Used to retrieve a value depending on the passed key.
     3. Contains(): Check if a a key exist or not and return a boolean.
     4. Keys(): Used to retrieve all available keys in the hash table.
+
+---
+
+# Hashtable lab:31
+
+## Challenge Summary
+<!-- Description of the challenge -->
+  - Write a function called repeated word that finds the first word to occur more than once in a string
+      - Arguments: string
+      - Return: string
+
+## Whiteboard Process
+<!-- Embedded whiteboard image -->
+<img src="./whiteboard/repeated_word.png" style="width:700px">
+
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+  - The approach is use the hashmap to make the repeated word have a specific index.
+  - So, every repeated word will be have the same index.
+  - Big(O)
+    - Time O(n<sup>2</sup>)
+    - Space O(n)
+
+## Solution
+<!-- Show how to run your code, and examples of it in action -->
+- ### To check my solution:
+    - Go to the directory `hash-table/hash_table`
+    - and type `python hashmap_repeated_word.py`

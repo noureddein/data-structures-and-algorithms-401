@@ -12,19 +12,19 @@ class Node:
 class HashTable(object):
     def __init__(self, INITIAL_CAPACITY=1024):
         self.hash_table_capacity = INITIAL_CAPACITY
-        self.buckets = [None]*self.hash_table_capacity
+        self.buckets = [None] * self.hash_table_capacity
 
     def _hash(self, key):
         hash_sum = 0
         for idx, char in enumerate(key):
             # hash_sum += (idx+len(char))**ord(char)
-            hash_sum += (idx+len(char))
+            hash_sum += idx + len(char)
         hash_sum = (hash_sum * 19) % self.hash_table_capacity
         return hash_sum
 
     def _validate_key(self, key):
         if not isinstance(key, str):
-            raise CustomError('You entered invalid key')
+            raise CustomError("You entered invalid key")
 
     def set(self, key, value):
         self._validate_key(key)
@@ -65,17 +65,15 @@ class HashTable(object):
                     keys.append(current.key)
                     current = current.next
         if not len(keys):
-            return 'Hash table empty'
+            return "Hash table empty"
         return keys
 
     def __str__(self):
         keys = self.keys()
-
-        return ', '.join(keys)
+        return ", ".join(keys)
 
 
 if __name__ == "__main__":
-    ht = HashTable(100)
-    ht.set('Cat 1', 'Milo')
-    ht.set('Cat 2', 'Olive')
-    print(ht)
+    ht = HashTable(10)
+    ht.set("Cat 1", "Milo")
+    ht.set("Cat 2", "Olive")
