@@ -13,6 +13,7 @@ class HashTable(object):
     def __init__(self, INITIAL_CAPACITY=1024):
         self.hash_table_capacity = INITIAL_CAPACITY
         self.buckets = [None] * self.hash_table_capacity
+        self.keys = []
 
     def _hash(self, key):
         hash_sum = 0
@@ -28,6 +29,7 @@ class HashTable(object):
 
     def set(self, key, value):
         self._validate_key(key)
+        self.keys.append(key)
         idx = self._hash(key)
         node = self.buckets[idx]
         if node is None:
@@ -56,20 +58,14 @@ class HashTable(object):
             return True
         return False
 
-    def keys(self):
-        keys = []
-        for bucket in self.buckets:
-            if bucket is not None:
-                current = bucket
-                while current:
-                    keys.append(current.key)
-                    current = current.next
-        if not len(keys):
+    def get_keys(self):
+        if not len(self.keys):
             return "Hash table empty"
-        return keys
+
+        return self.keys
 
     def __str__(self):
-        keys = self.keys()
+        keys = self.get_keys()
         return ", ".join(keys)
 
 
@@ -77,3 +73,4 @@ if __name__ == "__main__":
     ht = HashTable(10)
     ht.set("Cat 1", "Milo")
     ht.set("Cat 2", "Olive")
+    print(ht.get_keys())
