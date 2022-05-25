@@ -8,6 +8,9 @@ class Node:
         self.value = value
         self.next = None
 
+    def __str__(self) -> str:
+        return f"Key: {self.key}, Value: {self.value}"
+
 
 class HashTable(object):
     def __init__(self, INITIAL_CAPACITY=1024):
@@ -19,9 +22,9 @@ class HashTable(object):
         hash_sum = 0
         for idx, char in enumerate(key):
             # hash_sum += (idx+len(char))**ord(char)
-            hash_sum += idx + len(char)
-        hash_sum = (hash_sum * 19) % self.hash_table_capacity
-        return hash_sum
+            hash_sum += idx + len(key) + ord(char)
+        hash = (hash_sum * 19) % self.hash_table_capacity
+        return hash
 
     def _validate_key(self, key):
         if not isinstance(key, str):

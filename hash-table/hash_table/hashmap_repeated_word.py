@@ -1,4 +1,7 @@
-from hash_table.hash_table import HashTable, Node
+if __name__ == "__main__":
+    from hash_map import HashTable, Node, CustomError
+else:
+    from hash_table.hash_map import HashTable, Node
 
 
 class RepeatedWord(HashTable):
@@ -34,7 +37,6 @@ class RepeatedWord(HashTable):
 
 
 if __name__ == "__main__":
-    from hash_table import HashTable, Node, CustomError
 
     ht = RepeatedWord(10)
     print(ht.repeated_word(""))

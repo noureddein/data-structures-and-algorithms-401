@@ -71,3 +71,33 @@
 - ### To check my solution:
     - Go to the directory `hash-table/hash_table`
     - and type `python hashmap_repeated_word.py`
+
+
+---
+# Hashtable lab:32
+
+## Challenge Summary
+<!-- Description of the challenge -->
+  - Write a function called **tree_intersection** that takes two binary trees as parameters.
+  - Using your Hashmap implementation as a part of your algorithm, return a set of values found in both trees.
+
+## Whiteboard Process
+<!-- Embedded whiteboard image -->
+<img src="./whiteboard/tree_intersection.png" style="width:700px">
+<img src="./whiteboard/hash_table_CC32.png" style="width:700px">
+
+
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+- Approach 
+  - Create a hash table 
+  - loop through the first tree and hash it with a key that equal to value and location
+  - loop through the second tree and create a key with the value and location
+- Complexity
+  - Time --> O(n<sup>2</sup>)
+  - Space --> O(n)
+
+## Solution
+<!-- Show how to run your code, and examples of it in action -->
+- Go to the directory `hash-table/hash_table`
+- and type `python tree_intersection.py`
