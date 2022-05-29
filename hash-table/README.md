@@ -101,3 +101,37 @@
 <!-- Show how to run your code, and examples of it in action -->
 - Go to the directory `hash-table/hash_table`
 - and type `python tree_intersection.py`
+
+---
+
+# Hashtable lab:33
+
+## Hashmap LEFT JOIN and RIGHT JOIN
+<!-- Short summary or background information -->
+- LEFT JOIN means all the values in the first hashmap are returned, and if values exist in the “right” hashmap, they are appended to the result row and vice versa.
+
+## Challenge
+<!-- Description of the challenge -->
+- Write a function called **left_join** that take:
+  - Arguments: two hash maps
+    - The first parameter is a hashmap that has word strings as keys, and a synonym of the key as values.
+    - The second parameter is a hashmap that has word strings as keys, and antonyms of the key as values.
+  - Return: data structure that holds the results.
+
+## Whiteboard Process
+<!-- Embedded whiteboard image -->
+<img src="./whiteboard/hashmap-left-join.jpg" style="width:700px">
+<img src="./whiteboard/left_join_tables.png" style="width:700px">
+
+
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+- Loop through the first table and check if the second table contain the same key
+  - if YES, insert into the linked list array contain the values of key from table 1, value from table 1, value from table two
+  - if No, insert into the linked list array contain the values of key from table 1, value from table 1, and None
+
+
+## Solution
+<!-- Embedded whiteboard image -->
+- Go to the directory `hash-table/hash_table`
+- and type `python left_join.py`
